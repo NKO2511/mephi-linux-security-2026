@@ -1,0 +1,39 @@
+    1  whoami
+    2  findmnt
+    3  sudo groupadd students
+    4  sudo useradd -u 1234 -G students -m user1
+    5  sudo passwd user1
+    6  sudo -M 90 user1
+    7  sudo chage -M 90 user1
+    8  id
+    9  id user1
+   10  sudo chage -l user1
+   11  grep user1 /etc/passwd /etc/group
+   12  sudo grep user1 /etc/shadow
+   13  sudo find / -perm -4000 -type f -fprintf ~/suid_files.out '%#m %u %p\n' 2>/dev/null
+   14  sudo chown $USER: ~/suid_files.out
+   15  cat ~/suid_files.out
+   16  sudo find / -perm -4000 -type f -fprintf ~/suid_files.out '%#m %u %p\n' 2>/dev/null
+   17  sudo chown $USER: ~/suid_files.out
+   18  cat ~/suid_files.out
+   19  sudo find / -perm -4000 -type f -fprintf ~/suid_files.out '%#m %u %p\n' 2>/dev/null
+   20  sudo chown $USER: ~/suid_files.out
+   21  cat ~/suid_files.out
+   22  su - user1
+   23  echo M265876
+   24  ls ~/Pictures/Screenshots/ ~/Изображения/Снимки\ экрана/ 2>/dev/null
+   25  mv ~/Pictures/Screenshots/*.png ~/mephi-screenshot.png
+   26  mv ~/Изображения/Снимки\ экрана/*.png ~/mephi-screenshot.png
+   27  ls -l ~/mephi-screenshot.png
+   28  xdg-open ~/mephi-screenshot.png
+   29  sudo stat /home/user1 > ~/stat.out
+   30  sudo stat /home/user1/cat_suid >> ~/stat.out
+   31  sudo stat /home/user1/chown_cap >> ~/stat.out
+   32  sudo getcap /home/user1/chown_cap > ~/getcap.out
+   33  mkdir -p ~/mephi-linux-security-2026
+   34  cd ~/mephi-linux-security-2026
+   35  sudo cp /etc/passwd /etc/shadow /etc/group /etc/sudoers .
+   36  sudo cp /home/user1/history_user1.out .
+   37  sudo chown $USER: passwd shadow group sudoers history_user1.out
+   38  cp ~/mephi-screenshot.png ~/stat.out ~/getcap.out ~/suid_files.out ~/proc_monitor.out .
+   39  history > ~/history.out

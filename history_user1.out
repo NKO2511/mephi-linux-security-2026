@@ -1,0 +1,12 @@
+    1  passwd
+    2  cat /etc/shadow | head -3
+    3  ./cat_suid /etc/shadow | head -3
+    4  touch testfile
+    5  ls -l testfile
+    6  chown root testfile
+    7  ./chown_cap root:root testfile
+    8  ls -l testfile
+    9  sudo -l
+   10  sudo date -s "2026-11-01 12:00:00"
+   11  date
+   12  history > ~/history_user1.out

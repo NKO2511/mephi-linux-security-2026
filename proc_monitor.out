@@ -1,0 +1,4 @@
+    PID  RUID RUSER     EUID EUSER    CMD
+   3212  1000 nikikstv     0 root     fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+   5706  1000 nikikstv     0 root     su - user1
+   5912  1234 user1        0 root     passwd
